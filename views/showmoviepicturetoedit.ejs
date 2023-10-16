@@ -1,0 +1,15 @@
+<html>
+    <center>
+        <form action="/movie/editmoviepicture" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="mid" value="<%=data.mid %>">
+            <input type="hidden" name="oldpicture" value="<%=data.moviepicture %>">
+        <h1>
+            <%= data.moviename %>
+        </h1><br><br>
+        <img src="/images/<%= data.moviepicture %>" width="300"><br><br>
+        <b>Select New Image:</b><br><br>
+        <input type="file" name="moviepicture" required><br><br>
+        <input type="submit" value="Edit Picture">
+    </form>
+    </center>
+</html>
